@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-4"></div>
+        <div class="col-12 col-md-4 pt-5">
+            <div class="card border-2  rounded-0 bg-transparent p-3">
+                <h4 class="pb-3 pt-3 text-center">Add movie</h4>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="pb-3">
+                        <input type="text" name="name" class="form-control" placeholder="enter movie name">
+                    </div>
+                    <div class="pb-3">
+                        <input type="text" name="desc" class="form-control" placeholder="enter the description">
+                    </div>
+                    <div class="pb-3">
+                        <input type="text" name="year"  class="form-control"placeholder="enter the year">
+                    </div>
+                    <div class="pb-3">
+                        <input type="file" name="img"class="form-control">
+                    </div>
+                    <div class="pb-3 text-center">
+                        <input type="submit">
+                    </div>
+                    </form>
+            </div>
+        </div>
+        <div class="col-12 col-md-4"></div>
+    </div>
+</div>
+
+{% endblock %}

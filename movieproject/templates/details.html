@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+{% block body %}
+<div class="container">
+    <div class="row pt-5">
+        <div class="col-12 col-md-6 mb-3">
+            <div class="card h-100 bg-transparent border-0 rounded-0">
+                <img src="{{movie.img.url}}" class="card-img-top img-fluid" alt="..." style="height: 300px; width: 300px;">
+              </div>
+        </div>
+        <div class="col-12 col-md-6 mb-3">
+            <div class="card h-100 bg-transparent border-0">
+                <div class="card-body">
+                  <h4 class="card-title">{{movie.name}}</h4>
+                  <h6 class="card-text">{{movie.desc}}</h6>
+                  <a class="btn btn-warning" href="{%url 'movieapp:update' movie.id%}">Update</a>
+                  <a class="btn btn-danger" href="{%url 'movieapp:delete' movie.id%}">Delete</a>
+                
+                </div>
+              </div>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock  %}
